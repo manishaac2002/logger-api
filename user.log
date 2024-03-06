@@ -1,1 +1,7 @@
 {"level":"info","message":"Successfully got logged","timestamp":"2024-03-05T09:23:44.070Z"}
+2024-03-06T05:56:42.939Z - Successfully got logged - undefined
+2024-03-06T06:00:31.448Z - API request triggered - /api/some-endpoint
+2024-03-06T06:00:33.937Z - API request triggered - /api/some-endpoint
+{"level":"info","message":"Successfully got logged","timestamp":"2024-03-06T06:03:35.550Z"}
+{"level":"info","message":"Successfully got logged","timestamp":"2024-03-06T06:36:05.128Z"}
+{"level":"info","message":"Successfully got logged","timestamp":"2024-03-06T06:37:08.807Z"}
