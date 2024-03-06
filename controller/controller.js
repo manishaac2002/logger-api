@@ -1,11 +1,10 @@
-import apiLogger from '../middleware/logger.js';
-
+import apiLogger from '../controller/logger.js';
+import createNewUser from "../database/mysql.js";
 
 //get admin details
-const getAdminDetailsController = (request, response) => {
+const getAdminDetailsController = async (request, response) => {
   response.send('Hello World')
- const triggerApiLogger = apiLogger.logger.log('info','Successfully got logged')
- 
+ apiLogger.logger.log('info', 'Successfully got logged',)
 }
 
 //crete new admin

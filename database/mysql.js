@@ -12,8 +12,8 @@ const pool = mysql.createPool({
 }).promise()
 
 const createNewUser = async (data) => {
-  const result = await pool.query(`INSERT INTO log_messages (message, time, endpoint_api) 
-  VALUES (?, ?, ?)`, [message, time, endpoint_api])
+  const result = await pool.query(`INSERT INTO log_messages (message, time) VALUES (?, ?)`, [data.message, data.time])
+  console.log(result);
   return result
 }
 
