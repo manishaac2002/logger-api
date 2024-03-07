@@ -1,20 +1,15 @@
-import express from "express";
-import controllers from "./controller/controller.js";
+const express = require('express')
+const { getUserDetailsController, createUserDetailsController } = require('./controller.js')
 
-const app = express()
+const application = express()
+application.use(express.json())
 
-//routers api
-app.get('/test',controllers.test)
-app.post('/get-admin-details', controllers.getAdminDetailsController)
-app.post('/create-new-admin', controllers.createNewAdmin)
+// APIs
+application.get('/get-user-details', getUserDetailsController)
+application.post('/bio-data', createUserDetailsController)
 
-//port connection
-const port = 5003
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+// port
+const port = 2001
+application.listen(port, () => {
+    console.log(`Server is running on the port ${port}`);
 })
-
-
-
-
-
