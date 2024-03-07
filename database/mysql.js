@@ -12,6 +12,7 @@ const pool = mysql.createPool({
 }).promise()
 
 const createNewUser = async (data) => {
+  console.log(data);
   const result = await pool.query(`INSERT INTO log_messages (message, time) VALUES (?, ?)`, [data.message, data.time])
   console.log(result);
   return result

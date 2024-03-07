@@ -8,7 +8,7 @@ const logger = createLogger({
       filename: 'user.log',// this is a file get store the logs
       level: 'info',//level of logging message 
       format: format.combine(format.timestamp(), format.json(),format.printf(info => {
-        return `${info.message} - ${info.endpoint} - ${info.timestamp} `
+        return `${info.message} - ${info.timestamp} `
       })
       )
     })

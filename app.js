@@ -4,7 +4,8 @@ import controllers from "./controller/controller.js";
 const app = express()
 
 //routers api
-app.get('/get-admin-details', controllers.getAdminDetailsController)
+app.get('/test',controllers.test)
+app.post('/get-admin-details', controllers.getAdminDetailsController)
 app.post('/create-new-admin', controllers.createNewAdmin)
 
 //port connection
