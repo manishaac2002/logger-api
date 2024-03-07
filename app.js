@@ -1,11 +1,18 @@
-import  express from "express";
-import controller from './controller.js'
-import middleware from "./middleware/winston.js";
-const application = express()
+import express from "express";
+import controller from './controller.js';
+import winston from "./middleware/winston.js";
 
-application.get('/getMessages',middleware.triggerApi,controller.getMessages  )
+const application = express();
 
-const port = 6000
-application.listen(port,()=>{
+// Middleware to log API requests
+application.use((request, response, next) => {
+  winston.apiLogger(request, response, next);
+});
+
+// Define routes
+application.get('/getMessages', controller.getMessages);
+
+const port = 6000;
+application.listen(port, () => {
   console.log(`Server is running on the port ${port}`);
-})
+});
