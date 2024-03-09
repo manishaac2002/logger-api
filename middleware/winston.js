@@ -4,8 +4,10 @@ import TransportStream from 'winston-transport';
 import dotenv from 'dotenv';
 dotenv.config();
 
+
 //comments should be added
 // Connection
+
 const mysqlConnection = mysql.createConnection({
   host: process.env.MYSQL_HOST,
   user: process.env.MYSQL_USER,
