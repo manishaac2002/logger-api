@@ -12,7 +12,7 @@ application.use((request, response, next) => {
 // Define routes
 application.get('/getMessages', controller.getMessages);
 
-const port = 6000;
+const port = 6001;
 application.listen(port, () => {
   console.log(`Server is running on the port ${port}`);
 });
