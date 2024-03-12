@@ -1,20 +1,13 @@
-const { createNewUser } = require("./database")
-const apiLogger = require ('./controller/logger')
+import winston from "./middleware/winston.js";
 
+const getMessages = (request, response) => {
+  // Call the apiLogger middleware
+  // winston.apiLogger(request, response, () => {
+  // This is the route handler logic
+  response.send('Hello World');
+  // });
+};
 
-// get
-const getUserDetailsController = (request, response) => {
-    response.send('Hello World')
-}
-
-// post
-const createUserDetailsController = async (request, response) => {
-    const data = request.body
-    console.log(data);
-    apiLogger.logger.log('info','Successfully message received')
-    console.log();
-    const userDetailsFromDb = await createNewUser(apiLogger.logger)
-    response.send('message received')
-}
-
-module.exports = { getUserDetailsController, createUserDetailsController } 
+export default {
+  getMessages
+};
