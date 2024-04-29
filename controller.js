@@ -1,5 +1,5 @@
 const getMessages = (request, response) => {
-   response.send('Hello World')
+   response.send('Message received...!')
 }
 
 export default {
