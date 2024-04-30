@@ -44,6 +44,7 @@ const mysqlTransport = new TransportStream({
   }
 })
 
+//log in dev side 
 const logger = winston.createLogger({
   level: 'info',
   format: winston.format.combine(
