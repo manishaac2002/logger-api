@@ -14,6 +14,10 @@ application.get("/employee", (req, res) => {
   res.send(" Employee details");
 });
 
+application.get("/login", (req, res) => {
+  res.send(" this is login api");
+});
+
 
 application.listen(port, () => {
   console.log(`Server is running on port ${port}`);
