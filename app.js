@@ -18,6 +18,9 @@ application.get("/login", (req, res) => {
   res.send("This is login api");
 });
 
+application.get("/signup", (req, res) => {
+  res.send("This is signup api");
+});
 
 application.listen(port, () => {
   console.log(`Server is running on port ${port}`);
