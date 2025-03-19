@@ -11,11 +11,11 @@ application.get("/user", (req, res) => {
 });
 
 application.get("/employee", (req, res) => {
-  res.send(" Employee details");
+  res.send("Employee details");
 });
 
 application.get("/login", (req, res) => {
-  res.send(" this is login api");
+  res.send("This is login api");
 });
 
 
